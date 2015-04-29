@@ -4,6 +4,10 @@
   <description>Support for Thrift language</description>
   <change-notes>
     <![CDATA[
+      <p>0.9.5:</p>
+      <ul>
+        <li>Enable plugin for other IntelliJ IDE products - PyCharm 3.1, WebStorm 7, PhpStorm 7, and RubyMine 7 and greater.</li>
+      </ul>
       <p>0.9.4:</p>
       <ul>
         <li>Always absolute from source roots paths in includes</li>
@@ -69,10 +73,11 @@
   <version>0.9.4</version>
   <vendor>Twitter, Inc.</vendor>
   <idea-version since-build="132.1"/>
-
+  
   <application-components>
     <!-- Add your application components here -->
   </application-components>
+  <depends>com.intellij.modules.lang</depends>
   <extensions defaultExtensionNs="com.intellij">
     <fileTypeFactory implementation="com.intellij.plugins.thrift.ThriftFileTypeLoader"/>
     <lang.parserDefinition language="thrift" implementationClass="com.intellij.plugins.thrift.lang.parser.ThriftParserDefinition"/>
